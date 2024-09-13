@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2A2B2A;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name {
+    color: #55DB9A;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    font-size: 8rem;
+}
+
+.done {
+    color: #43AF97;
+}
