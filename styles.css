@@ -19,7 +19,7 @@ body {
     flex-direction: row;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
-    font-size: 8em;
+    font-size: min(10vw,17vh);
 }
 
 .done {
