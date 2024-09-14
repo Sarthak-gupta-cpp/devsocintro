@@ -42,7 +42,6 @@ function make_random() {
   if (level > 4 && !reverse && iter > 40){   
     reverse = !reverse
     iter = 0
-    console.log(level)
   }
   if (level > 5){
     reverse = !reverse
