@@ -12,7 +12,7 @@ const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%"
 
 var iter = 0
 var level = 0
-var started = false
+var started = true
 
 function make_random() {
     for (let index = 0; index < con_list.length; index++) {
@@ -41,8 +41,3 @@ function ranword(iter,dataindex) {
 
 
 setInterval(make_random,50)
-
-document.body.onclick = (e) => {
-    if (!started) iter = 0
-    started = true
-}
