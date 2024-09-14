@@ -16,6 +16,9 @@ con_list = [con1, con2, con3, con4, con5];
 
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%";
 
+var i_speed = 10
+var o_speed = 1.1
+var speed = o_speed;
 var iter = 0;
 var level = 0;
 var started = false;
@@ -39,6 +42,9 @@ function make_random() {
     level += 1;
     iter = 0;
   }
+  if (level == 5){
+    speed = o_speed
+  }
   if (level > 4 && !reverse && iter > 40){   
     reverse = !reverse
     iter = 0
@@ -49,7 +55,7 @@ function make_random() {
     started = false
     iter = 0
   }
-  iter += 1.1 ;
+  iter += speed;
 }
 
 function ranword(iter, dataindex) {
@@ -75,6 +81,24 @@ function ranword(iter, dataindex) {
 setInterval(make_random, 50);
 
 document.body.onmousedown = (e) => {
-  if (!started) iter = 0;
-  started = true;
+    if (!started) {
+        iter = 0;
+        speed = o_speed
+        started = true;
+    } else{
+        speed += i_speed;
+    }
 };
+
+window.addEventListener('keyup', function(event){
+    if(event.keyCode == 32){
+        if (!started) {
+            iter = 0;
+            speed = o_speed
+            started = true;
+        } else{
+            speed = i_speed;
+        }
+        
+    }
+})
