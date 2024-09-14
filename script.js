@@ -24,7 +24,7 @@ function make_random() {
         level += 1
         iter = 0
     }
-    iter += 0.9
+    iter += 1.1
 }
 
 function ranword(iter,dataindex) {
